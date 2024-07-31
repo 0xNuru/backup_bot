@@ -18,18 +18,26 @@ from tasks.reply_email import reply_email
 @task
 def parse():
     """Parse the email and extract relevant information"""
-    text = parse_email()
+    item = workitems.inputs.current
+    text = parse_email(item)
     workitems.outputs.create(payload={"text": text})
     return text
 
 @task
 def process():
     """Process the extracted information and return json"""
-    return process_letter()
+    item = workitems.inputs.current
+    text = item.payload['text']
+    summary = process_letter(text)
+    workitems.outputs.create(payload={"summary": summary})
+    return summary
 
 @task
 def reply():
     """Reply to the email thread with the processed information"""
+    item = workitems.inputs.current
+    summary = item.payload['summary']
+    reply_email(summary)
     return reply_email()
 
 
