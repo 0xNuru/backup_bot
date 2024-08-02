@@ -16,4 +16,5 @@ dependencies:
       - openai==1.37.1 # https://pypi.org/project/openai/#history
       - sendgrid==6.11.0 # https://pypi.org/project/sendgrid/#history
       - pypdf2 # https://pypi.org/project/pypdf2/#history
+      - jinja2 #https://pypi.org/project/Jinja2/
 

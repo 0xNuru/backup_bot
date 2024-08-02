@@ -1,0 +1,59 @@
+<style>
+  /* CSS styles */
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+  table {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    padding: 12px;
+    text-align: left;
+    background-color: #f2f2f2;
+    color: #333333;
+    font-weight: bold;
+    border-bottom: 2px solid #dddddd;
+  }
+
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tbody tr:hover {
+    background-color: #ebebeb;
+  }
+
+  /* Optional: Resizable columns (requires JavaScript) */
+  th.resizable {
+    position: relative;
+    cursor: col-resize;
+  }
+
+  th.resizable:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -4px;
+    bottom: 0;
+    width: 8px;
+    background-color: #dddddd;
+    z-index: 1;
+  }
+
+  th.resizable:hover:after {
+    background-color: #cccccc;
+  }
+  .letter {
+    padding: 0px 20px;
+  }
+  .summary {
+    padding: 0px 20px;
+  }
+</style>
